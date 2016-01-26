@@ -28,51 +28,38 @@ namespace BIT285_A1
 		/// <param name="e"></param>
 		protected void suggest_Click(object sender, EventArgs e)
 		{
-			// get references for textboxes
-			TextBox lastNameTB = (TextBox) FindControl("lastName");
-			TextBox birthYearTB = (TextBox) FindControl("birthYear");
-			TextBox favColorTB = (TextBox) FindControl("favColor");
-
-			// Put the text from the textboxes into local variables
-			string lastName = lastNameTB.Text;
-			string birthYear = birthYearTB.Text;
-			string favColor = favColorTB.Text;
+			// Put the text from the textboxes into local variables and trim off whitespace
+			string lastNameText = lastName.Text.Trim();
+			string birthYearText = birthYear.Text.Trim();
+			string favColorText = favColor.Text.Trim();
 
 			// Check that each string is not null or only whitespace
-			if (String.IsNullOrWhiteSpace(lastName) || 
-				String.IsNullOrWhiteSpace(birthYear) ||
-			    String.IsNullOrWhiteSpace(favColor))
+			if (String.IsNullOrWhiteSpace(lastNameText) || 
+				String.IsNullOrWhiteSpace(birthYearText) ||
+			    String.IsNullOrWhiteSpace(favColorText))
 				return;
 
 			// Clear TextBoxes
-			lastNameTB.Text = "";
-			birthYearTB.Text = "";
-			favColorTB.Text = "";
-
-			// trim whitespace off of string entries
-			lastName = lastName.Trim();
-			birthYear = birthYear.Trim();
-			favColor = favColor.Trim();
+			lastName.Text = "";
+			birthYear.Text = "";
+			favColor.Text = "";
 
 			// generate 5 unique passwords and store in array
-			string[] passwords =
+			string[] passwordsList =
 			{
-				FluffTo8(FirstPass(lastName, favColor)),
-				FluffTo8(SecondPass(lastName, birthYear, favColor)),
-				FluffTo8(ThirdPass(birthYear, favColor)),
-				FluffTo8(FourthPass(lastName, birthYear)),
-				FluffTo8(FifthPass(lastName, favColor))
+				FluffTo8(FirstPass(lastNameText, favColorText)),
+				FluffTo8(SecondPass(lastNameText, birthYearText, favColorText)),
+				FluffTo8(ThirdPass(birthYearText, favColorText)),
+				FluffTo8(FourthPass(lastNameText, birthYearText)),
+				FluffTo8(FifthPass(lastNameText, favColorText))
 			};
 
-			// get reference to dropdownlist
-			DropDownList ddl = (DropDownList) FindControl("passwords");
-
 			// clear dropdownlist
-			ddl.Items.Clear();
+			passwords.Items.Clear();
 
 			// add passwords to dropdownlist
-			foreach (string pass in passwords)
-				ddl.Items.Add(pass);
+			foreach (string pass in passwordsList)
+				passwords.Items.Add(pass);
 		}
 
 		/// <summary>
