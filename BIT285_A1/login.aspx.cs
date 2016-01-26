@@ -47,9 +47,13 @@ namespace BIT285_A1
 			if (String.IsNullOrWhiteSpace(passwordText)) 
 				Server.Transfer("~/PasswordGenerator.aspx");
 
+			// check if username and password match the correct information
 			if (String.Equals(userNameText, "Ian") && String.Equals(passwordText, "password"))
 				Server.Transfer("~/UserLog.aspx");
-
+			else // if not, display error message
+			{
+				error.Visible = true;
+			}
 		}
 	}
 }
