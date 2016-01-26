@@ -32,7 +32,7 @@ namespace BIT285_A1
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
-			Session["userName"] = "";
+			Session["userName"] = "Guest";
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
