@@ -18,16 +18,19 @@ namespace BIT285_A1
 		void Application_Start(object sender, EventArgs e)
 		{
 			DataTable dt = new DataTable();
-			dt.Columns.Add(new DataColumn("session_id",
+			dt.Columns.Add(new DataColumn("Session ID",
 				System.Type.GetType("System.String")));
-			dt.Columns.Add(new DataColumn("username",
+			dt.Columns.Add(new DataColumn("Username",
 				System.Type.GetType("System.String")));
-			dt.Columns.Add(new DataColumn("login_time",
+			dt.Columns.Add(new DataColumn("Login Time",
 				System.Type.GetType("System.DateTime")));
-			dt.Columns.Add(new DataColumn("ip_address",
+			dt.Columns.Add(new DataColumn("IP Address",
 				System.Type.GetType("System.String")));
 			// store the DataTable as an Application variable
 			Application["visitorTable"] = dt;
+
+			// track the number of visitors logged on to the application
+			Application["count"] = 0;
 		}
 
 		protected void Session_Start(object sender, EventArgs e)
