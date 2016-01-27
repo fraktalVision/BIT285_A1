@@ -19,6 +19,17 @@ namespace BIT285_A1
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
+			// Fill in the form and labels based on information from previous page
+			lastName.Text = (string) Session["lastName"];
+			name.Text = hello.Text = (string) Session["firstName"];
+			program.Text = (string) Session["program"];
+
+			if (!String.IsNullOrWhiteSpace(((string) Session["email"])))
+			{
+				string emailText = "We'll send email updates to you at ";
+				email.Text = emailText + (string) Session["email"];
+				email.Visible = true;
+			}
 		}
 
 		/// <summary>

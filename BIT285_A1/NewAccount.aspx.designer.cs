@@ -10,7 +10,7 @@
 namespace BIT285_A1 {
     
     
-    public partial class PasswordGenerator {
+    public partial class NewAccount {
         
         /// <summary>
         /// form1 control.
@@ -22,49 +22,13 @@ namespace BIT285_A1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// hello control.
+        /// firstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label hello;
-        
-        /// <summary>
-        /// program control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label program;
-        
-        /// <summary>
-        /// email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label email;
-        
-        /// <summary>
-        /// name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label name;
-        
-        /// <summary>
-        /// info control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table info;
+        protected global::System.Web.UI.WebControls.TextBox firstName;
         
         /// <summary>
         /// lastName control.
@@ -76,39 +40,57 @@ namespace BIT285_A1 {
         protected global::System.Web.UI.WebControls.TextBox lastName;
         
         /// <summary>
-        /// birthYear control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox birthYear;
+        protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
-        /// favColor control.
+        /// emailValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox favColor;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailValidator;
         
         /// <summary>
-        /// suggest control.
+        /// programs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button suggest;
+        protected global::System.Web.UI.WebControls.DropDownList programs;
         
         /// <summary>
-        /// passwords control.
+        /// sendEmails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList passwords;
+        protected global::System.Web.UI.WebControls.CheckBox sendEmails;
+        
+        /// <summary>
+        /// create control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button create;
+        
+        /// <summary>
+        /// reset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button reset;
     }
 }

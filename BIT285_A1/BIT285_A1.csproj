@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="NewAccount.aspx" />
     <Content Include="packages.config" />
     <Content Include="UserLog.aspx" />
     <None Include="Web.Debug.config">
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccount.aspx.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewAccount.aspx.designer.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordGenerator.aspx.cs">
       <DependentUpon>PasswordGenerator.aspx</DependentUpon>

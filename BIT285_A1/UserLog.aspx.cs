@@ -1,4 +1,13 @@
-﻿using System;
+﻿/**
+* Fred Jaworski
+* Assignment 1
+* 1/26/2016
+* 
+* Displays a customized welcome message based on username
+* displays a table of all currently logged in users
+* provides log out and refresh buttons
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

@@ -32,7 +32,15 @@ namespace BIT285_A1
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
+			// Setup Session variables with default values
 			Session["userName"] = "Guest";
+			Session["password"] = "!!Pass!!";
+			Session["firstName"] = "Guest";
+			Session["lastName"] = "Guest";
+			Session["email"] = "guest@guest.com";
+			Session["program"] = "Degree";
+			Session["birthYear"] = "2016";
+			Session["favColor"] = "null";
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
